@@ -1,5 +1,6 @@
 package com.damdung.banking.service.impl;
 
+import com.damdung.banking.annotation.LoggingAnnotation;
 import com.damdung.banking.entity.auth.AuthEntity;
 import com.damdung.banking.model.dto.AuthLoginDTO;
 import com.damdung.banking.model.dto.AuthRegisterDTO;
@@ -18,6 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@LoggingAnnotation
 public class AuthServiceImpl implements IAuthService {
     @Autowired
     private ModelMapper modelMapper;

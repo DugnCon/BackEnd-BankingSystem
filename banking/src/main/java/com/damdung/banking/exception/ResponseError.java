@@ -1,16 +1,20 @@
 package com.damdung.banking.exception;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Data
 public class ResponseError {
     private String message;
     private List<String> errors;
+
     public ResponseError(String message) {
         this.message = message;
     }
+
     public ResponseError(String message, List<String> errors) {
         this.message = message;
         this.errors = errors;

@@ -1,6 +1,6 @@
 package com.damdung.banking.model.dto;
 
-import com.damdung.banking.annotation.StrongPassword;
+import com.damdung.banking.annotation.StrongPasswordAnnotation;
 import com.damdung.banking.annotation.group.Create;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -29,6 +29,6 @@ public class AuthRegisterDTO {
     private String email;
     @Length(groups = Create.class, min = 8, max = 20, message = "Mật khẩu không đủ độ dài")
     @NotBlank(groups = Create.class)
-    @StrongPassword(groups = Create.class)
+    @StrongPasswordAnnotation(groups = Create.class)
     private String password;
 }
