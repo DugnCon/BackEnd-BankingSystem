@@ -35,6 +35,8 @@ public class AuthEntity {
     private String lastName;
     @Column(name = "address", nullable = false)
     private String address;
+    @Column(name = "city", nullable = false)
+    private String city;
     @Column(name = "state", nullable = false)
     private String state;
     @Column(name = "postalCode", nullable = false)

@@ -37,6 +37,11 @@ public class AuthServiceImpl implements IAuthService {
     public ResponseEntity<Object> authRegister(AuthRegisterDTO authRegisterDTO) {
         String newPassword = passwordEncoder.encode(authRegisterDTO.getPassword());
         AuthEntity authEntity = modelMapper.map(authRegisterDTO, AuthEntity.class);
+        authEntity.setRole("CUSTOMER");
+        authEntity.setAddress(authRegisterDTO.getAddress1());
+
+        authEntity.setPassword(newPassword);
+
         authRepository.save(authEntity);
 
         return ResponseEntity.ok(Map.of("message", "Tạo tài khoản thành công"));
@@ -49,10 +54,12 @@ public class AuthServiceImpl implements IAuthService {
         AuthEntity authEntity = authRepository.findByEmail(authLoginDTO.getEmail());
 
         if(authEntity == null) return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("message", "Sai tài khoản và mật khẩu"));
-        else if(passwordEncoder.matches(authLoginDTO.getPassword(), authEntity.getPassword())) return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("message", "Sai tài khoản và mật khẩu"));
+        else if(!passwordEncoder.matches(authLoginDTO.getPassword(), authEntity.getPassword())) return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("message", "Sai tài khoản và mật khẩu"));
 
         Map<String,Object> claims = new HashMap<>();
         claims.put("email", authEntity.getEmail());
+        claims.put("userID", authEntity.getUserID());
+        claims.put("role", authEntity.getRole());
 
         String token = jwt.getTokenWithClaims(claims);
         return ResponseEntity.ok(Map.of("message", "Đăng nhập thành công",

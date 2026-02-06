@@ -20,14 +20,12 @@ public class AuthController {
     private IAuthService iAuthService;
 
     @PostMapping("/register")
-    @ResponseBody
     public ResponseEntity<Object> register(@Validated(Create.class) @RequestBody AuthRegisterDTO authRegisterDTO) {
         return iAuthService.authRegister(authRegisterDTO);
     }
 
     @PostMapping("/login")
-    @ResponseBody
     public ResponseEntity<Object> login(@Valid @RequestBody AuthLoginDTO authLoginDTO) {
-        return null;
+        return iAuthService.authLogin(authLoginDTO);
     }
 }

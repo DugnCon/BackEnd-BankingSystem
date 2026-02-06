@@ -18,7 +18,7 @@ public class AuthRegisterDTO {
     private String firstName;
     @NotBlank(groups = Create.class, message = "Không được để trống tên")
     private String lastName;
-    private String address;
+    private String address1;
     private String city;
     private String state;
     private String postalCode;
@@ -28,7 +28,6 @@ public class AuthRegisterDTO {
     @Email(groups = Create.class, message = "Lỗi Email")
     private String email;
     @Length(groups = Create.class, min = 8, max = 20, message = "Mật khẩu không đủ độ dài")
-    @NotBlank(groups = Create.class)
     @StrongPasswordAnnotation(groups = Create.class)
     private String password;
 }

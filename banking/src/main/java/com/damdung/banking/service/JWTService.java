@@ -19,7 +19,7 @@ public class JWTService {
     private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 24;
     private static final long REFRESH_EXPIRATION_TIME = 1000 * 60 * 60 * 24 * 7;
 
-    public JWTService(@Value("jwt.secret") String secretKey) {
+    public JWTService(@Value("${jwt.secret}") String secretKey) {
         this.SECRET_KEY = secretKey;
         this.key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes(StandardCharsets.UTF_8));
     }
@@ -57,7 +57,7 @@ public class JWTService {
         return Jwts.parserBuilder()
                 .setSigningKey(key)
                 .build()
-                .parseClaimsJwt(token)
+                .parseClaimsJws(token)
                 .getBody();
     }
 
