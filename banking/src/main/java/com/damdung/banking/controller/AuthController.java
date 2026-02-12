@@ -4,6 +4,7 @@ import com.damdung.banking.annotation.group.Create;
 import com.damdung.banking.model.dto.AuthLoginDTO;
 import com.damdung.banking.model.dto.AuthRegisterDTO;
 import com.damdung.banking.model.dto.MyUserDetail;
+import com.damdung.banking.security.utils.SecurityUtils;
 import com.damdung.banking.service.IAuthService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,15 +18,21 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/auth")
 public class AuthController {
     @Autowired
-    private IAuthService iAuthService;
+    private IAuthService authService;
 
     @PostMapping("/register")
     public ResponseEntity<Object> register(@Validated(Create.class) @RequestBody AuthRegisterDTO authRegisterDTO) {
-        return iAuthService.authRegister(authRegisterDTO);
+        return authService.authRegister(authRegisterDTO);
     }
 
     @PostMapping("/login")
     public ResponseEntity<Object> login(@Valid @RequestBody AuthLoginDTO authLoginDTO) {
-        return iAuthService.authLogin(authLoginDTO);
+        return authService.authLogin(authLoginDTO);
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<Object> getInformation() {
+        MyUserDetail myUserDetail = SecurityUtils.getPrincipal();
+        return authService.getInformation(myUserDetail);
     }
 }

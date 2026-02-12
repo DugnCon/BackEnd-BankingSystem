@@ -50,4 +50,5 @@ public class ControllerAdvisor {
     public ResponseEntity<ResponseError> handleSQLException(SQLIntegrityConstraintViolationException ex, HttpServletRequest rq) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseError("Có thể email đã được đăng kí trước đó"));
     }
+
 }

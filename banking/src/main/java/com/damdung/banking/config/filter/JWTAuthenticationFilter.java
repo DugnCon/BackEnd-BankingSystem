@@ -1,4 +1,4 @@
-package com.damdung.banking.config;
+package com.damdung.banking.config.filter;
 
 import com.damdung.banking.service.CustomUserDetailService;
 import com.damdung.banking.service.JWTService;

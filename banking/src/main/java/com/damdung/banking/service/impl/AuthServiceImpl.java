@@ -2,8 +2,10 @@ package com.damdung.banking.service.impl;
 
 import com.damdung.banking.annotation.LoggingAnnotation;
 import com.damdung.banking.entity.auth.AuthEntity;
+import com.damdung.banking.model.dto.AuthInformationDTO;
 import com.damdung.banking.model.dto.AuthLoginDTO;
 import com.damdung.banking.model.dto.AuthRegisterDTO;
+import com.damdung.banking.model.dto.MyUserDetail;
 import com.damdung.banking.repository.IAuthRepository;
 import com.damdung.banking.service.IAuthService;
 import com.damdung.banking.service.JWTService;
@@ -44,7 +46,7 @@ public class AuthServiceImpl implements IAuthService {
 
         authRepository.save(authEntity);
 
-        return ResponseEntity.ok(Map.of("message", "Tạo tài khoản thành công"));
+        return ResponseEntity.ok(Map.of("message", "Tạo tài khoản thành công", "userID", authEntity.getUserID()));
     }
     /**
      * Xác nhận đăng nhập cho người dùng
@@ -61,8 +63,25 @@ public class AuthServiceImpl implements IAuthService {
         claims.put("userID", authEntity.getUserID());
         claims.put("role", authEntity.getRole());
 
+        AuthInformationDTO authInformationDTO = new AuthInformationDTO(authEntity.getUserID(), authEntity.getFirstName(), authEntity.getLastName(), authEntity.getEmail());
+
         String token = jwt.getTokenWithClaims(claims);
+
         return ResponseEntity.ok(Map.of("message", "Đăng nhập thành công",
-                                        "token", token));
+                                            "user", authInformationDTO,
+                                        "accessToken", token));
+    }
+
+    /**
+     * Lấy thông tin người dùng
+     * */
+    @Override
+    public ResponseEntity<Object> getInformation(MyUserDetail myUserDetail) {
+        Long userID = myUserDetail.getUserID();
+
+        AuthEntity authEntity = authRepository.findById(userID).orElseThrow(() -> new RuntimeException("Không tìm thấy người dùng"));
+        AuthInformationDTO authInformationDTO = new AuthInformationDTO(authEntity.getUserID(), authEntity.getFirstName(), authEntity.getLastName(), authEntity.getEmail());
+
+        return ResponseEntity.ok(authInformationDTO);
     }
 }
