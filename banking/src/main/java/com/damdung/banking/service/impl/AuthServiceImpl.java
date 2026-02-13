@@ -9,6 +9,8 @@ import com.damdung.banking.model.dto.MyUserDetail;
 import com.damdung.banking.repository.IAuthRepository;
 import com.damdung.banking.service.IAuthService;
 import com.damdung.banking.service.JWTService;
+import com.damdung.banking.service.rabbitmq.email.EmailProducer;
+import com.damdung.banking.service.rabbitmq.email.EmailSignupService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,6 +33,10 @@ public class AuthServiceImpl implements IAuthService {
     private JWTService jwt;
     @Autowired
     private IAuthRepository authRepository;
+    @Autowired
+    private EmailSignupService emailSignupService;
+    @Autowired
+    private EmailProducer emailProducer;
     /**
      * Lưu tài khoản cho người dùng
      * */
@@ -46,7 +52,12 @@ public class AuthServiceImpl implements IAuthService {
 
         authRepository.save(authEntity);
 
-        return ResponseEntity.ok(Map.of("message", "Tạo tài khoản thành công", "userID", authEntity.getUserID()));
+        emailProducer.setUploadTask(authEntity.getEmail()
+                , "Signup Success"
+                , "Your account has been created successfully!");
+
+        return ResponseEntity.ok(Map.of("message", "Tạo tài khoản thành công"
+                , "userID", authEntity.getUserID()));
     }
     /**
      * Xác nhận đăng nhập cho người dùng
