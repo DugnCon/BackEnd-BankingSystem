@@ -75,6 +75,7 @@ public class SecurityConfig{
                         .requestMatchers("/auth/login", "/auth/register").permitAll()
                         //.requestMatchers("/test").authenticated()
                         //.requestMatchers("/test").hasRole("CUSTOMER")
+                        .requestMatchers("/auth/me").authenticated()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(ex -> ex

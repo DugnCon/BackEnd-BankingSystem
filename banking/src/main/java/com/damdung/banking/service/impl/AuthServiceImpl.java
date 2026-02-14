@@ -91,8 +91,8 @@ public class AuthServiceImpl implements IAuthService {
         Long userID = myUserDetail.getUserID();
 
         AuthEntity authEntity = authRepository.findById(userID).orElseThrow(() -> new RuntimeException("Không tìm thấy người dùng"));
-        AuthInformationDTO authInformationDTO = new AuthInformationDTO(authEntity.getUserID(), authEntity.getFirstName(), authEntity.getLastName(), authEntity.getEmail());
+        AuthInformationDTO authInformationDTO = modelMapper.map(authEntity, AuthInformationDTO.class);
 
-        return ResponseEntity.ok(authInformationDTO);
+        return ResponseEntity.ok(Map.of("user", authInformationDTO));
     }
 }
