@@ -18,6 +18,7 @@ public class EmailConsumer {
     @RabbitListener(queues = RabbitMQConfig.EMAIL_MESSAGE_QUEUE)
     public void receiveEmailUpload(Map<String,Object> message) throws JsonProcessingException {
         SimpleMailMessage email = new SimpleMailMessage();
+
         email.setTo(MapUtils.getObject(message,"toEmail", String.class));
         email.setSubject(MapUtils.getObject(message,"toSubject", String.class));
         email.setText(MapUtils.getObject(message, "toText", String.class));

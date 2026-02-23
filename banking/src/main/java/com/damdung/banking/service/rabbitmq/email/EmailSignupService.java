@@ -11,6 +11,7 @@ public class EmailSignupService {
     private JavaMailSender mailSender;
     public void sendEmail(String toEmail) {
         SimpleMailMessage email = new SimpleMailMessage();
+
         email.setTo(toEmail);
         email.setSubject("Signup Success");
         email.setText("Your account has been created successfully!");

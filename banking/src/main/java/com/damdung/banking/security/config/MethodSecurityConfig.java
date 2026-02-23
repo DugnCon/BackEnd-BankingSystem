@@ -10,5 +10,4 @@ import org.springframework.security.config.annotation.method.configuration.Globa
         securedEnabled = true,
         jsr250Enabled = true
 )
-public class MethodSecurityConfig {
-}
+public class MethodSecurityConfig { }

@@ -9,6 +9,7 @@ import com.damdung.banking.model.dto.MyUserDetail;
 import com.damdung.banking.repository.IAuthRepository;
 import com.damdung.banking.service.IAuthService;
 import com.damdung.banking.service.JWTService;
+import com.damdung.banking.service.kafka.TransactionProducer;
 import com.damdung.banking.service.rabbitmq.email.EmailProducer;
 import com.damdung.banking.service.rabbitmq.email.EmailSignupService;
 import org.modelmapper.ModelMapper;
@@ -37,6 +38,8 @@ public class AuthServiceImpl implements IAuthService {
     private EmailSignupService emailSignupService;
     @Autowired
     private EmailProducer emailProducer;
+    @Autowired
+    private TransactionProducer transactionProducer;
     /**
      * Lưu tài khoản cho người dùng
      * */
@@ -77,6 +80,8 @@ public class AuthServiceImpl implements IAuthService {
         AuthInformationDTO authInformationDTO = new AuthInformationDTO(authEntity.getUserID(), authEntity.getFirstName(), authEntity.getLastName(), authEntity.getEmail());
 
         String token = jwt.getTokenWithClaims(claims);
+
+        //testProducer.sendMessage("test", "Kafka đã chạy thành công");
 
         return ResponseEntity.ok(Map.of("message", "Đăng nhập thành công",
                                             "user", authInformationDTO,

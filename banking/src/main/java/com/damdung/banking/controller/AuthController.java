@@ -14,6 +14,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -28,6 +30,11 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<Object> login(@Valid @RequestBody AuthLoginDTO authLoginDTO) {
         return authService.authLogin(authLoginDTO);
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<Object> logout() {
+        return ResponseEntity.ok(Map.of("message", "Đăng xuất thành công"));
     }
 
     @GetMapping("/me")

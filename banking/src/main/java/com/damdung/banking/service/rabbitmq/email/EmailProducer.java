@@ -17,6 +17,7 @@ public class EmailProducer {
 
     public void setUploadTask(String toEmail, String toSubject, String toText) {
         Map<String,Object> message = new HashMap<>();
+
         message.put("toEmail", toEmail);
         message.put("toSubject", toSubject);
         message.put("toText", toText);

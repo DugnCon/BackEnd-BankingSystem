@@ -72,10 +72,10 @@ public class SecurityConfig{
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/login", "/auth/register").permitAll()
+                        .requestMatchers("/auth/login", "/auth/register", "/auth/logout").permitAll()
                         //.requestMatchers("/test").authenticated()
                         //.requestMatchers("/test").hasRole("CUSTOMER")
-                        .requestMatchers("/auth/me").authenticated()
+                        //.requestMatchers("/auth/me", "/bank-accounts").authenticated()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(ex -> ex
