@@ -1,6 +1,8 @@
 package com.damdung.banking.entity.auth;
 
 import com.damdung.banking.entity.account.BankAccountEntity;
+import com.damdung.banking.entity.account.TransactionEntity;
+import com.damdung.banking.entity.account.TransferEntity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -13,6 +15,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -69,16 +73,7 @@ public class AuthEntity {
     @Column(name = "logoutAt", nullable = false)
     private LocalDateTime logoutAt;
 
-    @JsonBackReference
     @OneToOne(mappedBy = "auth", fetch = FetchType.LAZY)
+    @JsonBackReference
     private BankAccountEntity accounts;
-
-    @JsonManagedReference
-    public BankAccountEntity getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(BankAccountEntity accounts) {
-        this.accounts = accounts;
-    }
 }

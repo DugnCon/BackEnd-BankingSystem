@@ -1,7 +1,7 @@
 package com.damdung.banking.service.rabbitmq.email;
 
 import com.damdung.banking.config.rabbitmq.RabbitMQConfig;
-import com.damdung.banking.utils.MapUtils;
+import com.damdung.banking.model.dto.event.TransferEventDTO;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -12,33 +12,43 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.Map;
 
 @Service
-public class EmailConsumer {
+public class EmailTransactionConsumer {
 
     @Autowired
-    private JavaMailSender mailSender;
+    private JavaMailSender mail;
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    @RabbitListener(queues = RabbitMQConfig.EMAIL_SIGN_UP_QUEUE)
-    public void receiveEmailUpload(Map<String, Object> payload,
-                                   Message message,
-                                   Channel channel) throws IOException {
+    @RabbitListener(queues = RabbitMQConfig.EMAIL_TRANSACTION_MESSAGE_QUEUE)
+    public void receiveMessage(TransferEventDTO dto,
+                               Message message,
+                               Channel channel) throws IOException {
 
         long tag = message.getMessageProperties().getDeliveryTag();
 
         try {
 
-            SimpleMailMessage email = new SimpleMailMessage();
+            SimpleMailMessage senderMail = new SimpleMailMessage();
+            SimpleMailMessage receiverMail = new SimpleMailMessage();
 
-            email.setTo(MapUtils.getObject(payload, "toEmail", String.class));
-            email.setSubject(MapUtils.getObject(payload, "toSubject", String.class));
-            email.setText(MapUtils.getObject(payload, "toText", String.class));
+            senderMail.setTo(dto.getSenderEmail());
+            senderMail.setSubject("Transfer Successfully!");
+            senderMail.setText("You have successfully transfered to "
+                    + dto.getReceiverAccountNumber()
+                    + "\nThe amount transferred is "
+                    + dto.getFee());
 
-            mailSender.send(email);
+            receiverMail.setTo(dto.getReceiverEmail());
+            receiverMail.setSubject("Transfer Successfully!");
+            receiverMail.setText("You have received the money transfer from "
+                    + dto.getReceiverAccountNumber()
+                    + "\nThe amount you received is "
+                    + dto.getFee());
+
+            mail.send(senderMail, receiverMail);
 
             channel.basicAck(tag, false);
 
@@ -53,15 +63,19 @@ public class EmailConsumer {
                 rabbitTemplate.convertAndSend(
                         RabbitMQConfig.EMAIL_DLX,
                         "dlq",
-                        payload
+                        dto
                 );
 
             } else {
 
+                message.getMessageProperties()
+                        .getHeaders()
+                        .put("x-retry-count", retry + 1);
+
                 rabbitTemplate.convertAndSend(
                         RabbitMQConfig.EMAIL_DLX,
                         "retry",
-                        payload,
+                        dto,
                         m -> {
                             m.getMessageProperties().getHeaders()
                                     .put("x-retry-count", retry + 1);

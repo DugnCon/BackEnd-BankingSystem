@@ -35,8 +35,12 @@ public class RabbitJsonConfig {
 
         factory.setConnectionFactory(connectionFactory);
         factory.setMessageConverter(converter);
+        // tổng consumer muốn nhận khi chưa ack
+        factory.setPrefetchCount(5);
+        // xử lý song song
+        factory.setConcurrentConsumers(3);
 
-        //Tắt requeue tránh log liên tục
+        // tắt requeue tránh log liên tục
         factory.setDefaultRequeueRejected(false);
 
         return factory;

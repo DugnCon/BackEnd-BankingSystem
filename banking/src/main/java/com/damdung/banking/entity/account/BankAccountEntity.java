@@ -1,6 +1,8 @@
 package com.damdung.banking.entity.account;
 
 import com.damdung.banking.entity.auth.AuthEntity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +12,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Table(name = "accounts")
 @Entity
@@ -68,6 +72,42 @@ public class BankAccountEntity {
 
     @Column(name = "updatedAt")
     private LocalDateTime updatedAt;
+
+    @OneToMany(mappedBy = "sender", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonBackReference
+    private Set<TransferEntity> sender_transaction = new HashSet<>();
+
+    @JsonBackReference
+    @OneToMany(mappedBy = "receiver", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<TransferEntity> receiver_transaction = new HashSet<>();
+
+    @OneToMany(mappedBy = "sender", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @JsonBackReference
+    private Set<TransferHistoryEntity> sender_transfer_histories = new HashSet<>();
+
+    @OneToMany(mappedBy = "receiver", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @JsonBackReference
+    private Set<TransferHistoryEntity> receiver_transfer_histories = new HashSet<>();
+
+    @JsonBackReference
+    public Set<TransferEntity> getReceiver_transaction() {
+        return receiver_transaction;
+    }
+
+    @JsonBackReference
+    public Set<TransferEntity> getSender_transaction() {
+        return sender_transaction;
+    }
+
+    @JsonBackReference
+    public void setReceiver_transfer_histories(Set<TransferHistoryEntity> receiver_transfer_histories) {
+        this.receiver_transfer_histories = receiver_transfer_histories;
+    }
+
+    @JsonBackReference
+    public Set<TransferHistoryEntity> getSender_transfer_histories() {
+        return sender_transfer_histories;
+    }
 
     @PrePersist
     public void prePersist() {

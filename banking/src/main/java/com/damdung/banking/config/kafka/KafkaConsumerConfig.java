@@ -1,8 +1,11 @@
 package com.damdung.banking.config.kafka;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.jackson.JsonObjectDeserializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
@@ -31,7 +34,7 @@ public class KafkaConsumerConfig {
     private Integer concurrency;
 
     @Bean
-    public ConsumerFactory<String, String> consumerFactory() {
+    public ConsumerFactory<String, Object> consumerFactory() {
         Map<String, Object> configProps = new HashMap<>();
 
         // Liệt kê tất cả broker để có thể failover
@@ -40,11 +43,13 @@ public class KafkaConsumerConfig {
         // Consumer group và deserializers
         configProps.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         configProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-        configProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        configProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
 
         // Cấu hình cho phép scale consumers
-        configProps.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);  // Tự commit offset
-        configProps.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest"); // Đọc từ đầu nếu mất offset
+        // Tự commit offset
+        configProps.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
+        // Đọc từ đầu nếu mất offset
+        configProps.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
         // Tối ưu cho nhiều partition
         configProps.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, maxPollRecords);
@@ -64,8 +69,8 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, String> factory =
+    public ConcurrentKafkaListenerContainerFactory<String, Object> kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, Object> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
 
         factory.setConsumerFactory(consumerFactory());
@@ -79,7 +84,8 @@ public class KafkaConsumerConfig {
 
         // Cấu hình error handler để xử lý lỗi và retry
         DefaultErrorHandler errorHandler = new DefaultErrorHandler(
-                new FixedBackOff(1000L, 3L) // Retry 3 lần, mỗi lần cách 1 giây
+                // Retry 3 lần, mỗi lần cách 1 giây
+                new FixedBackOff(1000L, 3L)
         );
         factory.setCommonErrorHandler(errorHandler);
 
@@ -94,13 +100,14 @@ public class KafkaConsumerConfig {
 
     // Factory cho batch consumer (nếu cần xử lý nhiều message cùng lúc)
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, String> batchFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, String> factory =
+    public ConcurrentKafkaListenerContainerFactory<String, Object> batchFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, Object> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
 
         factory.setConsumerFactory(consumerFactory());
         factory.setConcurrency(concurrency);
-        factory.setBatchListener(true);// Gom các việc và xử lý 1 lần duy nhất
+        // Gom các việc và xử lý 1 lần duy nhất
+        factory.setBatchListener(true);
 
         return factory;
     }

@@ -22,6 +22,6 @@ public class EmailProducer {
         message.put("toSubject", toSubject);
         message.put("toText", toText);
 
-        rabbitTemplate.convertAndSend(RabbitMQConfig.EMAIL_MESSAGE_QUEUE, message);
+        rabbitTemplate.convertAndSend(RabbitMQConfig.EMAIL_SIGN_UP_QUEUE, message);
     }
 }
