@@ -81,4 +81,11 @@ public class BankAccountController {
         MyUserDetail myUserDetail = SecurityUtils.getPrincipal();
         return bankService.isAccountExists(myUserDetail);
     }
+
+    @GetMapping("/accounts/{accountId}/history")
+    public ResponseEntity<Object> getTransactionHistory(@PathVariable Long accountId
+            , @RequestParam(name = "limit", required = true) Integer limit) {
+        MyUserDetail myUserDetail = SecurityUtils.getPrincipal();
+        return bankService.getTransactionHistory(myUserDetail, limit, accountId);
+    }
 }

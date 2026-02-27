@@ -29,11 +29,11 @@ public class TransferHistoryEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fromAccountID", referencedColumnName = "accountID")
-    private BankAccountEntity receiver;
+    private BankAccountEntity sender;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "toAccountID", referencedColumnName = "accountID")
-    private BankAccountEntity sender;
+    private BankAccountEntity receiver;
 
     @Column(name = "transactionCode")
     private String transactionCode;

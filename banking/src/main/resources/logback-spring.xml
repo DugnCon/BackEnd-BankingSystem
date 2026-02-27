@@ -4,6 +4,13 @@
     <property name="LOG_PATH" value="logs"/>
     <property name="APP_NAME" value="banking-service"/>
 
+    <appender name="JSON_CONSOLE"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <customFields>{"service":"banking-service"}</customFields>
+        </encoder>
+    </appender>
+
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
@@ -24,15 +31,15 @@
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="JSON_CONSOLE"/>
         <appender-ref ref="FILE"/>
     </root>
 
     <logger name="org.springframework" level="INFO"/>
     <logger name="org.hibernate.SQL" level="INFO"/>
     <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="OFF"/>
-    <logger name="org.apache.kafka" level="INFO"/>
-    <logger name="org.springframework.kafka" level="INFO"/>
+<!--    <logger name="org.apache.kafka" level="INFO"/>-->
+<!--    <logger name="org.springframework.kafka" level="INFO"/>-->
     <logger name="com.damdung.banking.annotation.LoggingAnnotation" level="INFO"/>
     <logger name="com.damdung.banking.annotation.StrongPasswordAnnotation" level="DEBUG"/>
 

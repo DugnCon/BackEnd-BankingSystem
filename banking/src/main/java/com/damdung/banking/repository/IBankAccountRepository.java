@@ -15,8 +15,6 @@ import java.util.concurrent.CompletableFuture;
 
 @Repository
 public interface IBankAccountRepository extends JpaRepository<BankAccountEntity, Long> {
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
     BankAccountEntity findByAuth_UserID(Long userID);
-    @Lock(LockModeType.PESSIMISTIC_WRITE)
     BankAccountEntity findByAccountNumber(String shareableID);
 }

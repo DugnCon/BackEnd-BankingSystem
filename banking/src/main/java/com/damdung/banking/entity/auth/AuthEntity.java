@@ -76,4 +76,9 @@ public class AuthEntity {
     @OneToOne(mappedBy = "auth", fetch = FetchType.LAZY)
     @JsonBackReference
     private BankAccountEntity accounts;
+
+    @JsonBackReference
+    public BankAccountEntity getAccounts() {
+        return accounts;
+    }
 }

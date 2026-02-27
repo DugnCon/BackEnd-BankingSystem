@@ -24,6 +24,9 @@ import com.damdung.banking.utils.SQLUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -32,6 +35,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
@@ -205,5 +209,19 @@ public class BankServiceImpl implements IBankService {
             log.error("Lỗi chi tiết khi lưu history: ", e);
             throw new BusinessException("Failed to save transaction history!");
         }
+    }
+
+    @Override
+    public ResponseEntity<Object> getTransactionHistory(MyUserDetail myUserDetail, Integer limit, Long accountID) {
+        try {
+            Pageable pageable = PageRequest.of(0, limit, Sort.by("createdAt").descending());
+            List<TransferHistoryEntity> listTransferHistory = transferHistoryRepository.findBySender_AccountID(accountID, pageable);
+
+            log.info("AccountID: {}, ListTransfer: {}", accountID, listTransferHistory);
+            return ResponseEntity.ok(Map.of("transactions", listTransferHistory));
+        } catch (Exception e) {
+            log.error("Failed to find transfer history");
+        }
+        return ResponseEntity.ok(Map.of("transactions", List.of()));
     }
 }

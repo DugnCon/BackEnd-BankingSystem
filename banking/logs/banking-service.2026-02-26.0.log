@@ -1,0 +1,912 @@
+2026-02-26 00:01:07 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-26 00:01:07 [restartedMain] INFO  com.damdung.banking.BankingApplication - Starting BankingApplication using Java 22.0.1 with PID 76852 (C:\Esclipe_Web\banking system\banking\target\classes started by Admin in C:\Esclipe_Web\banking system\banking)
+2026-02-26 00:01:07 [restartedMain] INFO  com.damdung.banking.BankingApplication - The following 1 profile is active: "dev"
+2026-02-26 00:01:07 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-26 00:01:07 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-26 00:01:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 00:01:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 734 ms. Found 6 JPA repository interfaces.
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:01:12 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 0 Redis repository interfaces.
+2026-02-26 00:01:15 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 00:01:15 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 00:01:15 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 00:01:15 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-26 00:01:15 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 00:01:15 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8394 ms
+2026-02-26 00:01:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 00:01:19 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d4703eb
+2026-02-26 00:01:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 00:01:19 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)
+2026-02-26 00:01:19 [restartedMain] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.070s)
+2026-02-26 00:01:19 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `banking`: 1
+2026-02-26 00:01:19 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `banking` is up to date. No migration necessary.
+2026-02-26 00:01:20 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 00:01:20 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-26 00:01:20 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 00:01:21 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 00:01:21 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 00:01:21 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 00:01:24 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 00:01:24 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 00:01:32 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 00:01:35 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-02-26 00:01:35 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-02-26 00:01:41 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 00:01:41 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 00:01:41 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 00:01:42 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5555]
+2026-02-26 00:01:42 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#93497b0:0/SimpleConnection@44d7b829 [delegate=amqp://guest@127.0.0.1:5555/, localPort=57763]
+2026-02-26 00:01:42 [restartedMain] INFO  com.damdung.banking.BankingApplication - Started BankingApplication in 36.845 seconds (process running for 37.744)
+{"@timestamp":"2026-02-26T00:11:06.7056987+07:00","@version":"1","message":"HV000001: Hibernate Validator 8.0.3.Final","logger_name":"org.hibernate.validator.internal.util.Version","thread_name":"background-preinit","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:06.7995318+07:00","@version":"1","message":"Starting BankingApplication using Java 22.0.1 with PID 22108 (C:\\Esclipe_Web\\banking system\\banking\\target\\classes started by Admin in C:\\Esclipe_Web\\banking system\\banking)","logger_name":"com.damdung.banking.BankingApplication","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:06.8026819+07:00","@version":"1","message":"The following 1 profile is active: \"dev\"","logger_name":"com.damdung.banking.BankingApplication","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:06.9563618+07:00","@version":"1","message":"Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable","logger_name":"org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:06.9574642+07:00","@version":"1","message":"For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'","logger_name":"org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:09.8849406+07:00","@version":"1","message":"Multiple Spring Data modules found, entering strict repository configuration mode","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:09.8877145+07:00","@version":"1","message":"Bootstrapping Spring Data JPA repositories in DEFAULT mode.","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.2758922+07:00","@version":"1","message":"Finished Spring Data repository scanning in 375 ms. Found 6 JPA repository interfaces.","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3065832+07:00","@version":"1","message":"Multiple Spring Data modules found, entering strict repository configuration mode","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3090983+07:00","@version":"1","message":"Bootstrapping Spring Data Redis repositories in DEFAULT mode.","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3539641+07:00","@version":"1","message":"Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3549754+07:00","@version":"1","message":"Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3559745+07:00","@version":"1","message":"Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3569838+07:00","@version":"1","message":"Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3569838+07:00","@version":"1","message":"Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3582305+07:00","@version":"1","message":"Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:10.3592322+07:00","@version":"1","message":"Finished Spring Data repository scanning in 36 ms. Found 0 Redis repository interfaces.","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:12.8512916+07:00","@version":"1","message":"Tomcat initialized with port 8080 (http)","logger_name":"org.springframework.boot.web.embedded.tomcat.TomcatWebServer","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:12.8694082+07:00","@version":"1","message":"Initializing ProtocolHandler [\"http-nio-8080\"]","logger_name":"org.apache.coyote.http11.Http11NioProtocol","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:12.8726787+07:00","@version":"1","message":"Starting service [Tomcat]","logger_name":"org.apache.catalina.core.StandardService","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:12.8741868+07:00","@version":"1","message":"Starting Servlet engine: [Apache Tomcat/10.1.50]","logger_name":"org.apache.catalina.core.StandardEngine","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:12.9595386+07:00","@version":"1","message":"Initializing Spring embedded WebApplicationContext","logger_name":"org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:12.9608678+07:00","@version":"1","message":"Root WebApplicationContext: initialization completed in 6000 ms","logger_name":"org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:14.6969119+07:00","@version":"1","message":"HikariPool-1 - Starting...","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:15.3497724+07:00","@version":"1","message":"HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@706e624c","logger_name":"com.zaxxer.hikari.pool.HikariPool","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:15.3517884+07:00","@version":"1","message":"HikariPool-1 - Start completed.","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:15.4259822+07:00","@version":"1","message":"Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)","logger_name":"org.flywaydb.core.FlywayExecutor","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:15.5220168+07:00","@version":"1","message":"Successfully validated 1 migration (execution time 00:00.045s)","logger_name":"org.flywaydb.core.internal.command.DbValidate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:15.5590875+07:00","@version":"1","message":"Current version of schema `banking`: 1","logger_name":"org.flywaydb.core.internal.command.DbMigrate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:15.5646507+07:00","@version":"1","message":"Schema `banking` is up to date. No migration necessary.","logger_name":"org.flywaydb.core.internal.command.DbMigrate","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:15.8969585+07:00","@version":"1","message":"HHH000204: Processing PersistenceUnitInfo [name: default]","logger_name":"org.hibernate.jpa.internal.util.LogHelper","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:15.9795044+07:00","@version":"1","message":"HHH000412: Hibernate ORM core version 6.6.39.Final","logger_name":"org.hibernate.Version","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:16.0385118+07:00","@version":"1","message":"HHH000026: Second-level cache disabled","logger_name":"org.hibernate.cache.internal.RegionFactoryInitiator","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:16.6519386+07:00","@version":"1","message":"No LoadTimeWeaver setup: ignoring JPA class transformer","logger_name":"org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:16.7653444+07:00","@version":"1","message":"HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)","logger_name":"org.hibernate.orm.deprecation","thread_name":"restartedMain","level":"WARN","level_value":30000}
+{"@timestamp":"2026-02-26T00:11:16.8036024+07:00","@version":"1","message":"HHH10001005: Database info:\n\tDatabase JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']\n\tDatabase driver: undefined/unknown\n\tDatabase version: 8.0.39\n\tAutocommit mode: undefined/unknown\n\tIsolation level: undefined/unknown\n\tMinimum pool size: undefined/unknown\n\tMaximum pool size: undefined/unknown","logger_name":"org.hibernate.orm.connections.pooling","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:19.3840064+07:00","@version":"1","message":"HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)","logger_name":"org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:19.5575361+07:00","@version":"1","message":"Initialized JPA EntityManagerFactory for persistence unit 'default'","logger_name":"org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:24.7025095+07:00","@version":"1","message":"spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning","logger_name":"org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration","thread_name":"restartedMain","level":"WARN","level_value":30000}
+{"@timestamp":"2026-02-26T00:11:26.7728313+07:00","@version":"1","message":"Exposing 2 endpoints beneath base path '/actuator'","logger_name":"org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:27.0232431+07:00","@version":"1","message":"Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService","logger_name":"org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:31.4698191+07:00","@version":"1","message":"LiveReload server is running on port 35729","logger_name":"org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:31.7082657+07:00","@version":"1","message":"Starting ProtocolHandler [\"http-nio-8080\"]","logger_name":"org.apache.coyote.http11.Http11NioProtocol","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:31.7280788+07:00","@version":"1","message":"Tomcat started on port 8080 (http) with context path '/'","logger_name":"org.springframework.boot.web.embedded.tomcat.TomcatWebServer","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:32.3938429+07:00","@version":"1","message":"Attempting to connect to: [localhost:5555]","logger_name":"org.springframework.amqp.rabbit.connection.CachingConnectionFactory","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:32.5437385+07:00","@version":"1","message":"Created new connection: rabbitConnectionFactory#5b5bebce:0/SimpleConnection@54dd3834 [delegate=amqp://guest@127.0.0.1:5555/, localPort=61242]","logger_name":"org.springframework.amqp.rabbit.connection.CachingConnectionFactory","thread_name":"restartedMain","level":"INFO","level_value":20000}
+{"@timestamp":"2026-02-26T00:11:32.7741079+07:00","@version":"1","message":"Started BankingApplication in 27.462 seconds (process running for 28.409)","logger_name":"com.damdung.banking.BankingApplication","thread_name":"restartedMain","level":"INFO","level_value":20000}
+2026-02-26 00:13:58 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-26 00:13:58 [restartedMain] INFO  com.damdung.banking.BankingApplication - Starting BankingApplication using Java 22.0.1 with PID 47844 (C:\Esclipe_Web\banking system\banking\target\classes started by Admin in C:\Esclipe_Web\banking system\banking)
+2026-02-26 00:13:58 [restartedMain] INFO  com.damdung.banking.BankingApplication - The following 1 profile is active: "dev"
+2026-02-26 00:13:58 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-26 00:13:58 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 366 ms. Found 6 JPA repository interfaces.
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:14:01 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2026-02-26 00:14:03 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 00:14:03 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 00:14:03 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 00:14:03 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-26 00:14:03 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 00:14:03 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5270 ms
+2026-02-26 00:14:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 00:14:05 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@485b2b37
+2026-02-26 00:14:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 00:14:06 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)
+2026-02-26 00:14:06 [restartedMain] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.043s)
+2026-02-26 00:14:06 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `banking`: 1
+2026-02-26 00:14:06 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `banking` is up to date. No migration necessary.
+2026-02-26 00:14:06 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 00:14:06 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-26 00:14:06 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 00:14:07 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 00:14:07 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 00:14:07 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 00:14:09 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 00:14:09 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 00:14:14 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 00:14:16 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-02-26 00:14:16 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-02-26 00:14:20 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 00:14:20 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 00:14:20 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 00:14:21 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5555]
+2026-02-26 00:14:21 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#49cbe740:0/SimpleConnection@6030b1cb [delegate=amqp://guest@127.0.0.1:5555/, localPort=50846]
+2026-02-26 00:14:22 [restartedMain] INFO  com.damdung.banking.BankingApplication - Started BankingApplication in 25.038 seconds (process running for 26.067)
+2026-02-26 00:18:19 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-26 00:18:20 [restartedMain] INFO  com.damdung.banking.BankingApplication - Starting BankingApplication using Java 22.0.1 with PID 16380 (C:\Esclipe_Web\banking system\banking\target\classes started by Admin in C:\Esclipe_Web\banking system\banking)
+2026-02-26 00:18:20 [restartedMain] INFO  com.damdung.banking.BankingApplication - The following 1 profile is active: "dev"
+2026-02-26 00:18:20 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-26 00:18:20 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 558 ms. Found 6 JPA repository interfaces.
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 00:18:26 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2026-02-26 00:18:31 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 00:18:31 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 00:18:31 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 00:18:31 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-26 00:18:31 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 00:18:31 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 11124 ms
+2026-02-26 00:18:34 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 00:18:35 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@485b2b37
+2026-02-26 00:18:35 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 00:18:35 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)
+2026-02-26 00:18:35 [restartedMain] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.085s)
+2026-02-26 00:18:35 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `banking`: 1
+2026-02-26 00:18:35 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `banking` is up to date. No migration necessary.
+2026-02-26 00:18:36 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 00:18:36 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-26 00:18:36 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 00:18:37 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 00:18:37 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 00:18:37 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 00:18:41 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 00:18:41 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 00:18:50 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 00:18:53 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-02-26 00:18:53 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-02-26 00:19:01 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 00:19:01 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 00:19:01 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 00:19:03 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5555]
+2026-02-26 00:19:03 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1a68976e:0/SimpleConnection@7d19d07b [delegate=amqp://guest@127.0.0.1:5555/, localPort=58720]
+2026-02-26 00:19:03 [restartedMain] INFO  com.damdung.banking.BankingApplication - Started BankingApplication in 46.893 seconds (process running for 48.426)
+2026-02-26 00:22:34 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 00:22:34 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 00:22:34 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-02-26 00:22:35 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=180ms
+2026-02-26 00:22:36 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=845ms
+2026-02-26 00:22:37 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=14ms
+2026-02-26 00:22:37 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=14ms
+2026-02-26 00:22:37 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=17ms
+2026-02-26 00:22:38 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 00:22:48 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=233ms
+2026-02-26 00:22:48 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=17ms
+2026-02-26 00:22:48 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=14ms
+2026-02-26 00:22:48 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 00:22:48 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 00:22:51 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=12ms
+2026-02-26 00:22:51 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 00:22:52 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 00:22:52 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 00:22:53 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 00:22:53 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 00:22:54 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 00:22:54 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 00:22:54 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 00:22:55 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 00:22:55 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=19ms
+2026-02-26 00:23:01 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 00:27:45 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=11ms
+2026-02-26 00:27:45 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 00:27:47 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 00:27:47 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 00:27:50 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=2ms
+2026-02-26 00:28:21 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 00:28:21 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 00:33:42 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 00:33:53 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 00:33:53 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 00:46:24 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=15ms
+2026-02-26 00:46:24 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 00:46:32 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=13ms
+2026-02-26 00:46:32 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 00:47:34 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=18ms
+2026-02-26 00:47:34 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 00:48:39 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 00:48:39 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 00:48:40 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=12ms
+2026-02-26 00:48:40 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 00:48:41 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 00:48:41 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 00:48:41 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 00:48:41 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 00:48:42 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 00:48:42 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 00:48:42 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=22ms
+2026-02-26 00:48:44 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 00:48:48 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 00:48:48 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 01:55:15 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-26 01:55:15 [restartedMain] INFO  com.damdung.banking.BankingApplication - Starting BankingApplication using Java 22.0.1 with PID 62436 (C:\Esclipe_Web\banking system\banking\target\classes started by Admin in C:\Esclipe_Web\banking system\banking)
+2026-02-26 01:55:15 [restartedMain] INFO  com.damdung.banking.BankingApplication - The following 1 profile is active: "dev"
+2026-02-26 01:55:15 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-26 01:55:15 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 344 ms. Found 6 JPA repository interfaces.
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 01:55:18 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2026-02-26 01:55:20 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 01:55:20 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 01:55:20 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 01:55:20 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-26 01:55:21 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 01:55:21 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5136 ms
+2026-02-26 01:55:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 01:55:23 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71db56cc
+2026-02-26 01:55:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 01:55:23 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)
+2026-02-26 01:55:24 [restartedMain] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.050s)
+2026-02-26 01:55:24 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `banking`: 1
+2026-02-26 01:55:24 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `banking` is up to date. No migration necessary.
+2026-02-26 01:55:24 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 01:55:24 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-26 01:55:24 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 01:55:25 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 01:55:25 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 01:55:25 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 01:55:27 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 01:55:27 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 01:55:33 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 01:55:35 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-02-26 01:55:35 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-02-26 01:55:39 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 01:55:39 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 01:55:39 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 01:55:40 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5555]
+2026-02-26 01:55:40 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#4dcb1860:0/SimpleConnection@17a0f5c2 [delegate=amqp://guest@127.0.0.1:5555/, localPort=55129]
+2026-02-26 01:55:40 [restartedMain] INFO  com.damdung.banking.BankingApplication - Started BankingApplication in 26.101 seconds (process running for 26.782)
+2026-02-26 01:56:40 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 01:56:40 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 01:56:40 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-26 01:56:46 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=191ms
+2026-02-26 01:56:46 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=121ms
+2026-02-26 01:56:46 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=108ms
+2026-02-26 01:56:47 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=539ms
+2026-02-26 01:56:47 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=540ms
+2026-02-26 01:56:47 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=13ms
+2026-02-26 01:56:47 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 01:56:49 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 01:56:49 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 01:56:49 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=13ms
+2026-02-26 01:56:49 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 01:56:50 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 01:56:50 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 01:56:50 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 01:56:50 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 01:58:23 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 01:58:23 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 01:58:45 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 01:58:46 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 01:58:46 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 01:58:46 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 01:58:46 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 01:58:46 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 01:58:46 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 01:58:47 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 01:58:47 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 01:58:47 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 02:00:29 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-26 02:00:29 [restartedMain] INFO  com.damdung.banking.BankingApplication - Starting BankingApplication using Java 22.0.1 with PID 13056 (C:\Esclipe_Web\banking system\banking\target\classes started by Admin in C:\Esclipe_Web\banking system\banking)
+2026-02-26 02:00:29 [restartedMain] INFO  com.damdung.banking.BankingApplication - The following 1 profile is active: "dev"
+2026-02-26 02:00:29 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-26 02:00:29 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-26 02:00:31 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 02:00:31 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 329 ms. Found 6 JPA repository interfaces.
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 02:00:32 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2026-02-26 02:00:34 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 02:00:34 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 02:00:34 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 02:00:34 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-26 02:00:34 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 02:00:34 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4922 ms
+2026-02-26 02:00:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 02:00:37 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e7fe9d0
+2026-02-26 02:00:37 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 02:00:37 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)
+2026-02-26 02:00:37 [restartedMain] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.039s)
+2026-02-26 02:00:37 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `banking`: 1
+2026-02-26 02:00:37 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `banking` is up to date. No migration necessary.
+2026-02-26 02:00:38 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 02:00:38 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-26 02:00:38 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 02:00:38 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 02:00:39 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 02:00:39 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 02:00:41 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 02:00:41 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 02:00:46 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 02:00:48 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-02-26 02:00:48 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-02-26 02:00:52 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 02:00:53 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 02:00:53 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 02:00:53 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5555]
+2026-02-26 02:00:53 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#49cbe740:0/SimpleConnection@10c878c4 [delegate=amqp://guest@127.0.0.1:5555/, localPort=49677]
+2026-02-26 02:00:54 [restartedMain] INFO  com.damdung.banking.BankingApplication - Started BankingApplication in 25.572 seconds (process running for 26.187)
+2026-02-26 02:02:06 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 02:02:06 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 02:02:06 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-26 02:02:07 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=126ms
+2026-02-26 02:02:08 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=587ms
+2026-02-26 02:02:37 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=12ms
+2026-02-26 02:02:37 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 02:06:05 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=233ms
+2026-02-26 02:08:08 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=161ms
+2026-02-26 02:11:11 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 02:11:48 [http-nio-8080-exec-6] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12
+2026-02-26 02:11:48 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=43ms
+2026-02-26 02:11:48 [http-nio-8080-exec-6] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor]] with root cause
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ImmutableCollections$Map1["transactions"]->java.util.ArrayList[0]->com.damdung.banking.entity.account.TransferHistoryEntity["transfer"]->com.damdung.banking.entity.account.TransferEntity$HibernateProxy["sender"]->com.damdung.banking.entity.account.BankAccountEntity$HibernateProxy["auth"]->com.damdung.banking.entity.auth.AuthEntity$HibernateProxy["hibernateLazyInitializer"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1359)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:415)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:52)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:29)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:760)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:760)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:760)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:760)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)
+	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serializeContents(IndexedListSerializer.java:119)
+	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serialize(IndexedListSerializer.java:79)
+	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serialize(IndexedListSerializer.java:18)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeFields(MapSerializer.java:807)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeWithoutTypeInfo(MapSerializer.java:763)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:719)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:34)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:503)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:342)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1587)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:485)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:126)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:345)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:263)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseEntityReturnValueHandler.handleReturnValue(ResponseEntityReturnValueHandler.java:79)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:490)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:351)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:83)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:129)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at com.damdung.banking.config.filter.JWTAuthenticationFilter.doFilterInternal(JWTAuthenticationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at com.damdung.banking.config.filter.RateLimitFilter.doFilterInternal(RateLimitFilter.java:78)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:334)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:225)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2026-02-26 10:29:27 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-26 10:29:27 [restartedMain] INFO  com.damdung.banking.BankingApplication - Starting BankingApplication using Java 22.0.1 with PID 22484 (C:\Esclipe_Web\banking system\banking\target\classes started by Admin in C:\Esclipe_Web\banking system\banking)
+2026-02-26 10:29:27 [restartedMain] INFO  com.damdung.banking.BankingApplication - The following 1 profile is active: "dev"
+2026-02-26 10:29:27 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-26 10:29:27 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 230 ms. Found 6 JPA repository interfaces.
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:29:29 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2026-02-26 10:29:31 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 10:29:31 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 10:29:31 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 10:29:31 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-26 10:29:31 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 10:29:31 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3661 ms
+2026-02-26 10:29:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 10:29:32 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c6fda88
+2026-02-26 10:29:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 10:29:32 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)
+2026-02-26 10:29:32 [restartedMain] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.070s)
+2026-02-26 10:29:32 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `banking`: 1
+2026-02-26 10:29:32 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `banking` is up to date. No migration necessary.
+2026-02-26 10:29:33 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 10:29:33 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-26 10:29:33 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 10:29:33 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 10:29:33 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 10:29:33 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 10:29:35 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 10:29:35 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 10:29:38 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 10:29:39 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-02-26 10:29:39 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-02-26 10:29:42 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 10:29:42 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 10:29:42 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 10:29:43 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5555]
+2026-02-26 10:29:43 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1baa7ca0:0/SimpleConnection@14a5e80b [delegate=amqp://guest@127.0.0.1:5555/, localPort=52519]
+2026-02-26 10:29:43 [restartedMain] INFO  com.damdung.banking.BankingApplication - Started BankingApplication in 17.015 seconds (process running for 17.655)
+2026-02-26 10:30:03 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 10:30:03 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 10:30:03 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-26 10:30:04 [http-nio-8080-exec-2] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@5db022e1]
+2026-02-26 10:30:04 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=45ms
+2026-02-26 10:33:15 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=80ms
+2026-02-26 10:33:16 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=636ms
+2026-02-26 10:33:16 [http-nio-8080-exec-6] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@18fd4f9c]
+2026-02-26 10:33:16 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 10:33:16 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=12ms
+2026-02-26 10:33:16 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 10:33:16 [http-nio-8080-exec-9] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@7370561f]
+2026-02-26 10:33:16 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 10:33:18 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=11ms
+2026-02-26 10:33:18 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 10:33:18 [http-nio-8080-exec-2] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@4ea5815c]
+2026-02-26 10:33:18 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 10:35:09 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=11ms
+2026-02-26 10:35:09 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 10:35:09 [http-nio-8080-exec-7] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@5549f0b4]
+2026-02-26 10:35:09 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 10:36:58 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=211ms
+2026-02-26 10:36:59 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 10:36:59 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=14ms
+2026-02-26 10:36:59 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 10:36:59 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 10:36:59 [http-nio-8080-exec-8] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@76eec550]
+2026-02-26 10:36:59 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 10:36:59 [http-nio-8080-exec-9] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@154ac1d2]
+2026-02-26 10:36:59 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 10:45:40 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=124ms
+2026-02-26 10:45:40 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 10:45:40 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 10:45:40 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 10:45:40 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 10:45:40 [http-nio-8080-exec-10] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@721b1577]
+2026-02-26 10:45:40 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 10:45:40 [http-nio-8080-exec-1] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@36d574dc]
+2026-02-26 10:45:40 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 10:50:09 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-26 10:50:09 [restartedMain] INFO  com.damdung.banking.BankingApplication - Starting BankingApplication using Java 22.0.1 with PID 20928 (C:\Esclipe_Web\banking system\banking\target\classes started by Admin in C:\Esclipe_Web\banking system\banking)
+2026-02-26 10:50:09 [restartedMain] INFO  com.damdung.banking.BankingApplication - The following 1 profile is active: "dev"
+2026-02-26 10:50:09 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-26 10:50:09 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 196 ms. Found 6 JPA repository interfaces.
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:50:11 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2026-02-26 10:50:12 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 10:50:12 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 10:50:12 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 10:50:12 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-26 10:50:13 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 10:50:13 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3382 ms
+2026-02-26 10:50:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 10:50:14 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39ac58b2
+2026-02-26 10:50:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 10:50:14 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)
+2026-02-26 10:50:14 [restartedMain] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.024s)
+2026-02-26 10:50:14 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `banking`: 1
+2026-02-26 10:50:14 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `banking` is up to date. No migration necessary.
+2026-02-26 10:50:14 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 10:50:14 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-26 10:50:14 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 10:50:15 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 10:50:15 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 10:50:15 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 10:50:16 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 10:50:16 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 10:50:20 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 10:50:20 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-02-26 10:50:21 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-02-26 10:50:23 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 10:50:23 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 10:50:23 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 10:50:24 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5555]
+2026-02-26 10:50:24 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3c9e17c9:0/SimpleConnection@380f13e [delegate=amqp://guest@127.0.0.1:5555/, localPort=57021]
+2026-02-26 10:50:24 [restartedMain] INFO  com.damdung.banking.BankingApplication - Started BankingApplication in 15.745 seconds (process running for 16.367)
+2026-02-26 10:50:43 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 10:50:43 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 10:50:43 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-26 10:50:44 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=464ms
+2026-02-26 10:50:53 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=162ms
+2026-02-26 10:50:57 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=215ms
+2026-02-26 10:50:58 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=126ms
+2026-02-26 10:50:58 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=126ms
+2026-02-26 10:50:58 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=477ms
+2026-02-26 10:50:58 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=477ms
+2026-02-26 10:50:58 [http-nio-8080-exec-8] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@796c98e7]
+2026-02-26 10:50:58 [http-nio-8080-exec-9] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@2f7450ce]
+2026-02-26 10:50:58 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=35ms
+2026-02-26 10:50:58 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=36ms
+2026-02-26 10:55:38 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=165ms
+2026-02-26 10:55:39 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 10:55:39 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 10:55:39 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 10:55:39 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 10:55:39 [http-nio-8080-exec-10] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@543ea815]
+2026-02-26 10:55:39 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 10:55:39 [http-nio-8080-exec-1] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@1dfde449]
+2026-02-26 10:55:39 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 10:59:40 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-02-26 10:59:40 [restartedMain] INFO  com.damdung.banking.BankingApplication - Starting BankingApplication using Java 22.0.1 with PID 3648 (C:\Esclipe_Web\banking system\banking\target\classes started by Admin in C:\Esclipe_Web\banking system\banking)
+2026-02-26 10:59:40 [restartedMain] INFO  com.damdung.banking.BankingApplication - The following 1 profile is active: "dev"
+2026-02-26 10:59:40 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-26 10:59:40 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 207 ms. Found 6 JPA repository interfaces.
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IAuthRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IBankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.IIdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.damdung.banking.repository.ITransferRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-26 10:59:42 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2026-02-26 10:59:43 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 10:59:43 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-26 10:59:43 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 10:59:43 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-26 10:59:43 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 10:59:43 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3303 ms
+2026-02-26 10:59:44 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-26 10:59:45 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39ac58b2
+2026-02-26 10:59:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-26 10:59:45 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/banking (MySQL 8.0)
+2026-02-26 10:59:45 [restartedMain] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.024s)
+2026-02-26 10:59:45 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `banking`: 1
+2026-02-26 10:59:45 [restartedMain] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `banking` is up to date. No migration necessary.
+2026-02-26 10:59:45 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 10:59:45 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-02-26 10:59:45 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 10:59:46 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 10:59:46 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 10:59:46 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 10:59:47 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 10:59:47 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 10:59:50 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 10:59:51 [restartedMain] INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-02-26 10:59:51 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-02-26 10:59:54 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 10:59:54 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-26 10:59:54 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 10:59:54 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5555]
+2026-02-26 10:59:54 [restartedMain] INFO  org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3c9e17c9:0/SimpleConnection@e6aac1 [delegate=amqp://guest@127.0.0.1:5555/, localPort=55000]
+2026-02-26 10:59:54 [restartedMain] INFO  com.damdung.banking.BankingApplication - Started BankingApplication in 15.107 seconds (process running for 15.731)
+2026-02-26 11:01:07 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 11:01:07 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 11:01:07 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-26 11:01:08 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=474ms
+2026-02-26 11:01:08 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=87ms
+2026-02-26 11:01:08 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=87ms
+2026-02-26 11:01:09 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=612ms
+2026-02-26 11:01:09 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=609ms
+2026-02-26 11:01:09 [http-nio-8080-exec-7] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@57124c8e]
+2026-02-26 11:01:09 [http-nio-8080-exec-10] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@1f3b16c5]
+2026-02-26 11:01:09 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=39ms
+2026-02-26 11:01:09 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=41ms
+2026-02-26 11:11:30 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=175ms
+2026-02-26 11:11:33 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=205ms
+2026-02-26 11:11:36 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 11:11:36 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=11ms
+2026-02-26 11:11:36 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=11ms
+2026-02-26 11:11:36 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=11ms
+2026-02-26 11:11:36 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 11:11:36 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=12ms
+2026-02-26 11:11:36 [http-nio-8080-exec-1] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@7e25500]
+2026-02-26 11:11:36 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=16ms
+2026-02-26 11:11:36 [http-nio-8080-exec-2] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@a829cbd]
+2026-02-26 11:11:36 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 11:14:41 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 11:14:41 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 11:14:41 [http-nio-8080-exec-1] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@78fd89c8]
+2026-02-26 11:14:41 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 11:14:55 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=13ms
+2026-02-26 11:14:55 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 11:14:55 [http-nio-8080-exec-4] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@10f5959]
+2026-02-26 11:14:55 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 11:15:06 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=10ms
+2026-02-26 11:15:06 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 11:15:08 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 11:15:08 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 11:15:08 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 11:15:21 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 11:15:21 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 11:15:22 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=2ms
+2026-02-26 11:16:12 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 11:16:12 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 11:16:13 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 11:16:13 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=11ms
+2026-02-26 11:16:13 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 11:16:15 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 11:16:15 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=2ms
+2026-02-26 11:16:15 [http-nio-8080-exec-2] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@5b56d1d3]
+2026-02-26 11:16:15 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 11:16:17 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=2ms
+2026-02-26 11:16:22 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 11:16:23 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 11:18:47 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.authLogin(..) | resultType=ResponseEntity | time=115ms
+2026-02-26 11:18:47 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=9ms
+2026-02-26 11:18:47 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=7ms
+2026-02-26 11:18:47 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 11:18:47 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 11:18:47 [http-nio-8080-exec-10] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@1af74510]
+2026-02-26 11:18:47 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 11:18:47 [http-nio-8080-exec-8] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@304256ae]
+2026-02-26 11:18:47 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=14ms
+2026-02-26 11:18:49 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 11:18:49 [http-nio-8080-exec-1] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 11:18:50 [http-nio-8080-exec-6] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 11:18:50 [http-nio-8080-exec-2] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=2ms
+2026-02-26 11:19:02 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=19ms
+2026-02-26 11:19:02 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 11:19:02 [http-nio-8080-exec-5] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@7ef71c1c]
+2026-02-26 11:19:02 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=5ms
+2026-02-26 11:19:04 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 11:19:04 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 11:19:04 [http-nio-8080-exec-8] INFO  com.damdung.banking.service.impl.BankServiceImpl - AccountID: 12, ListTransfer: [com.damdung.banking.entity.account.TransferHistoryEntity@1dfddc10]
+2026-02-26 11:19:04 [http-nio-8080-exec-8] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getTransactionHistory(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 11:22:40 [http-nio-8080-exec-4] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=8ms
+2026-02-26 11:22:40 [http-nio-8080-exec-3] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=4ms
+2026-02-26 11:22:40 [http-nio-8080-exec-5] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.isAccountExists(..) | resultType=ResponseEntity | time=2ms
+2026-02-26 11:22:42 [http-nio-8080-exec-7] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded AuthServiceImpl.getInformation(..) | resultType=ResponseEntity | time=6ms
+2026-02-26 11:22:42 [http-nio-8080-exec-10] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.getAccounts(..) | resultType=ResponseEntity | time=3ms
+2026-02-26 11:23:32 [http-nio-8080-exec-9] INFO  com.damdung.banking.service.impl.BankServiceImpl - Đã lưu history thành công với ID: 2
+2026-02-26 11:23:32 [http-nio-8080-exec-9] INFO  com.damdung.banking.utils.LoggingUtils - Succeeded BankServiceImpl.createTransactions(..) | resultType=ResponseEntity | time=77ms
+2026-02-26 11:23:38 [AMQP Connection 127.0.0.1:5555] ERROR org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - unknown delivery tag 1, class-id=60, method-id=80)
+2026-02-26 11:23:39 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] WARN  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - unknown delivery tag 1, class-id=60, method-id=80)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:528)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:349)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:193)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:125)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:761)
+	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:688)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2026-02-26 11:23:39 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer - Restarting Consumer@6296801a: tags=[[amq.ctag-4kLeIm8D__YEcQhtugtXpA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5555/,4), conn: Proxy@44821cef Shared Rabbit Connection: SimpleConnection@e6aac1 [delegate=amqp://guest@127.0.0.1:5555/, localPort=55000], acknowledgeMode=AUTO local queue size=0
