@@ -7,6 +7,7 @@ import com.damdung.banking.model.dto.QrTransactionDTO;
 import com.damdung.banking.repository.IBankAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalTime;
 
@@ -15,12 +16,16 @@ import java.time.LocalTime;
 public class QrTransactionImpl {
     @Autowired
     private IBankAccountRepository bankAccountRepository;
+
+    @Transactional
     public QrTransactionDTO getQrTransactionDTO(MyUserDetail myUserDetail) {
         try {
             Long userID = myUserDetail.getUserID();
             BankAccountEntity bankAccountEntity = bankAccountRepository.findByAuth_UserID(userID);
 
             QrTransactionDTO qrTransactionDTO = new QrTransactionDTO();
+
+            qrTransactionDTO.setReceiverId(userID.toString());
             qrTransactionDTO.setAccountNumber(bankAccountEntity.getAccountNumber());
             qrTransactionDTO.setAccountName(bankAccountEntity.getOfficialName());
             qrTransactionDTO.setBankName("UETBank");

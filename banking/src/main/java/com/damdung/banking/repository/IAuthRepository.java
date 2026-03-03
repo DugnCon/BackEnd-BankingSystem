@@ -1,6 +1,7 @@
 package com.damdung.banking.repository;
 
 import com.damdung.banking.entity.auth.AuthEntity;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,4 +9,8 @@ import org.springframework.stereotype.Repository;
 public interface IAuthRepository extends JpaRepository<AuthEntity, Long> {
     AuthEntity findByEmail(String email);
     AuthEntity findByEmailAndPassword(String email, String password);
+
+//    Chống N+1 query
+//    @EntityGraph(attributePaths = {"your_attribute_join"})
+//    Optional<AuthEntity> findById(Long id);
 }

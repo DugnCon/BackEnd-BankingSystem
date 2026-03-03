@@ -40,11 +40,13 @@ public class RedisTemplateConfig {
     {
         RedisTemplate<String,String> template = new RedisTemplate<>();
         template.setConnectionFactory(factory);
+
         template.setHashKeySerializer(new StringRedisSerializer());
         template.setHashValueSerializer(new StringRedisSerializer());
         template.setKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(new StringRedisSerializer());
         template.afterPropertiesSet();
+
         return template;
     }
 }
